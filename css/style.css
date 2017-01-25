@@ -15,6 +15,7 @@ select {
   outline: 0;
   border: 0;
   border-radius: 0;
+  appearance: none;
 }
 p {
   margin: 0;
@@ -41,88 +42,66 @@ body {
   display: table-footer-group;
 }
 .header {
-  padding-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 5px;
+  height: 136px;
+  background: #f8f8f8;
+  padding-top: 18px;
 }
 .logo {
-  width: 68px;
   display: table;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  padding-bottom: 5px;
 }
 .logo img {
-  width: 100%;
+  width: 56px;
 }
-.form-section {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  width: 100%;
-}
-.sumary {
-  border-top: 1px solid #d3d3d4;
-  border-bottom: 1px solid #d3d3d4;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: center;
-}
-.footer {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+.text {
+  font-weight: 600;
+  font-size: 14.5px;
 }
 .title {
   font-size: 17px;
   font-weight: 600;
   text-align: center;
+  padding-bottom: 2px;
 }
 .subtitle {
   font-size: 14px;
   text-align: center;
-  color: #5b5b65;
+  font-weight: 400;
 }
 .button {
   color: #fff;
   background-color: #f99945;
   display: table;
   width: 100%;
-  padding: 7px;
+  padding: 20px;
   text-align: center;
   font-weight: 500;
+  font-size: 22px;
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  margin-top: 4px;
+}
+.input-container {
+  border-bottom: solid 1px #f2f2f2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+.input-container-text {
+  width: 75px;
+}
+.input-container-input {
+  flex: 1;
 }
 .input,
 .select {
   background-color: #fff;
-  border-left: 1px solid #cececf;
-  border-right: 1px solid #cececf;
-  border-bottom: 1px solid #cececf;
-  padding-top: 8px;
-  padding-right: 8px;
-  padding-bottom: 8px;
-  padding-left: 27px;
+  font-size: 15px;
   width: 100%;
-  font-size: 14px;
-}
-.input.first,
-.select.first {
-  border-top: 1px solid #cececf;
-}
-.grid {
-  display: flex;
-}
-.grid .left {
-  margin-right: 5px;
-}
-.grid .content {
-  flex: 1;
-}
-.u-margin-bottom-10 {
-  margin-bottom: 10px;
-}
-.u-margin-bottom-20 {
-  margin-bottom: 20px;
 }
