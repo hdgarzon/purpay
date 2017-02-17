@@ -19,30 +19,26 @@
  		border-radius 5px
 
 
-
-
 /**
 * **************************************
 * LANGUAGE
 * **************************************
 */
 
-.tsc-form-language-inner
+.form__language__inner
     p
         font-size 12px
         i
             font-size 13px
 
-.tsc-dropdown
+.form__dropdown
     position relative
     height 36px
     margin-bottom 10px
-        &-elements
-        // border-bottom-left-radius 6px;
-        // border-bottom-right-radius 6px;
+    &__elements
         border-radius 6px
         background white
-        &.open
+        &__open
             position absolute
             width 100%
             z-index 1
@@ -50,39 +46,22 @@
             box-shadow 0 7px 20px rgba(0,0,0,0.25)
             .fa-angle-down
                 display none
-            &.gray
-                background #f5f5f7 !important
-                span
-                .tsc-dropdown-element
-                    &hover
-                        background #ddd
-            .tsc-dropdown-elementnot(last-child)
-                .tsc-form-body-option
-                    border-bottom 0
-                    border-bottom-left-radius 0px
-                    border-bottom-right-radius 0px
-            .tsc-dropdown-elementnot(first-child)
-                .tsc-form-body-option
-                    border-top-left-radius 0px
-                    border-top-right-radius 0px
+        &--gray
+            width 80px
+            background: initial
+            span
+            .form__dropdown__element
+                &:hover
+                    background #ddd
             .tsc-form-body-optionhover
                 transition .35s
                 background #000
-        &-element
+        &__element
             display block
             &.selected
                 display block
-.tsc-form
-    &-language
-        cursor pointer
-        position absolute
-        z-index: 1;
-        height 22px
-        img
-            width 100%
-            min-width 26px
-
-    &-language
+.form
+    &__language
         top: 5px;
         left 5px
         cursor pointer
@@ -90,25 +69,19 @@
         z-index: 1;
         height 22px
         img
-            width 100%
-            min-width 26px
-        &-inner
+            width: 26px;
+        &__inner
             padding: 3px;
             display: flex;
             align-items: center;
             width 22px
             left 8px
             top 8px
-            img
-                // width: 28px;
-                width: 26px;
             p
                 display: flex;
                 align-items: center;
-                // font-size: 11px;
                 font-size: 10px;
                 color: rgba(#666, .75);
-                // font-weight: 500;
                 i
                     padding-left: 2px
                     margin-top: 2px
@@ -119,9 +92,8 @@
 * CLOSED
 * **************************************
 */
-.tsc-form
-    &-back
-    &-closed
+.form
+    &__closed
         right 8px
         width 22px
         top 8px

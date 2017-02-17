@@ -11,35 +11,33 @@
         <title></title>
     </head>
     <body>
-
-
+        <!-- Star layout -->
         <div class="layout">
-            <div class="layout-header">
-
+            <!-- Star layout Header -->
+            <div class="layout__header">
                 <!-- Star  CLOSED -->
-                <a class="tsc-form-closed" v-on:click="falseView()">
+                <a class="form__closed" >
                     <img src="./img/close.png">
                 </a>
                 <!-- End CLOSED -->
-
                 <!-- Star LANGUAGE -->
-                <div class="tsc-form-language">
-                    <div class="tsc-dropdown 1">
-                        <div class="tsc-dropdown-elements gray" style="background: initial; width: 80px;">
-                            <div class="tsc-dropdown-element" data-index=0>
-                                <div class="tsc-form-language-inner">
+                <div class="form__language">
+                    <div class="form__language__dropdown">
+                        <div class="form__dropdown__elements--gray" data-index=0>
+                            <div class="form__dropdown__element">
+                                <div class="form__language__inner">
                                     <img src="./img/spain_round_icon_64.png">
                                     <p>Spanish <i class="fa fa-angle-down"></i></p>
                                 </div>
                             </div>
-                            <div class="tsc-dropdown-element selected" data-index=1>
-                                <div class="tsc-form-language-inner">
+                            <div class="form__dropdown__element--selected" data-index=1>
+                                <div class="form__language__inner">
                                     <img src="./img/united_kingdom_round_icon_64.png">
                                     <p>English <i class="fa fa-angle-down"></i></p>
                                 </div>
                             </div>
-                            <div class="tsc-dropdown-element" data-index=2>
-                                <div class="tsc-form-language-inner">
+                            <div class="form__dropdown__element" data-index=2>
+                                <div class="form__language__inner">
                                     <img src="./img/france_round_icon_64.png">
                                     <p>French <i class="fa fa-angle-down"></i></p>
                                 </div>
@@ -57,13 +55,126 @@
                     <p class="subtitle">Women's Clothing, Designer Shoes & Flats</p>
                 </header>
             </div>
+            <!-- End layout Header -->
 
-            <div class="layout-body">
+            <!-- Star layout Body -->
+            <div class="layout__body">
+                <!-- Star Summary -->
+                <section class="tsc-sumary" style="cursor: auto;">
+                    <p class="tsc-sumary-text" style="cursor: pointer;">
+                        <svg width="20" height="19" xmlns="http://www.w3.org/2000/svg" class="order-summary-toggle__icon">
+                            <path d="M17.178 13.088H5.453c-.454 0-.91-.364-.91-.818L3.727 1.818H0V0h4.544c.455 0 .91.364.91.818l.09 1.272h13.45c.274 0 .547.09.73.364.18.182.27.454.18.727l-1.817 9.18c-.09.455-.455.728-.91.728zM6.27 11.27h10.09l1.454-7.362H5.634l.637 7.362zm.092 7.715c1.004 0 1.818-.813 1.818-1.817s-.814-1.818-1.818-1.818-1.818.814-1.818 1.818.814 1.817 1.818 1.817zm9.18 0c1.004 0 1.817-.813 1.817-1.817s-.814-1.818-1.818-1.818-1.818.814-1.818 1.818.814 1.817 1.818 1.817z">
+                            </path>
+                        </svg>
+                        <span>Item(s) total</span> <i class="fa fa-angle-down"></i>
+                    </p>
 
-                <!-- <section class="sumary">
-                    Items Total
-                </section> -->
+                    <span class="tsc-sumary-price">
+                        <span class="js-currency-symbol"> $ </span> 949.80
 
+                        <!-- <div class="tsc-dropdown 2" style="display: inline-block; height: 15px; width: 40px;margin-bottom:0px !important;"> -->
+                        <div style="display: inline-block; height: 15px; width: 40px;margin-bottom:0px !important;">
+                            <!-- <div class="tsc-dropdown-elements gray"  v-bind:class="{'open': openCur}" style="background: initial;"> -->
+                            <div class="gray" style="background: initial;">
+
+                                <div class="tsc-dropdown-element selected" data-index="0">
+                                    <span style="padding: 3px 5px; display: block; font-weight: 200; font-size: 10px; color: #999;">USD
+                                    <!-- <i class="fa fa-angle-down" style="margin-left: 1px;"></i> -->
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                </section>
+
+                <div class="cover in" style="z-index: 21; display: block;">
+                    <div class="products-container in" style="max-height: 100%; overflow: auto;">
+
+                        <div class="tsc-form-body-product">
+                            <figure class="tsc-form-body-product-image" style="position: relative;">
+                                <div class="closed" style="right: -10px; top: -10px; padding: 5px;">
+                                    <i class="fa fa-times-circle"></i>
+                                </div>
+                                <img src="http://purplepay.crossborder.fedex.com/Shopping_Bag_files/jay-king-reversible-turquoise-and-amethyst-cuff-d-20161219162358513-513047.jpg">
+                            </figure>
+                            <div class="tsc-form-body-product-content">
+                                <div>
+                                    <p class="name"> Jay King Reversible Turquoise </p>
+                                    <p class="description"> Amethyst Sterling Silver Cuff Bracelet </p>
+                                </div>
+                                <div>
+                                    <div class="tsc-form-body-product-content-number"></div>
+                                </div>
+                            </div>
+                            <div class="tsc-form-body-product-number" style="display: flex; flex-direction: column; align-items: center; margin-right: 3px;">
+                                <i style="color: #bbb; font-size: 9px; padding: 5px; cursor: pointer;" class="fa fa-chevron-up"></i>
+
+                                <input style="margin-right: 0px; text-align: center;" type="text" value="1">
+
+                                <i style="color: #bbb; font-size: 9px; padding: 5px; cursor: pointer;" class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="tsc-form-body-product-price">
+                                269.90
+                                <span style="font-weight: 200; font-size: 9px; color: #999;">USD</span>
+                            </div>
+                        </div><div class="tsc-form-body-product">
+                            <figure class="tsc-form-body-product-image" style="position: relative;">
+                                <div class="closed" style="right: -10px; top: -10px; padding: 5px;">
+                                    <i class="fa fa-times-circle"></i>
+                                </div>
+                                <img src="http://purplepay.crossborder.fedex.com/Shopping_Bag_files/bose-wave-soundtouch-music-system-iv-d-20151006174537153-450290_043.jpg">
+                            </figure>
+                            <div class="tsc-form-body-product-content">
+                                <div>
+                                    <p class="name"> Bose® Wave® SoundTouch™ </p>
+                                    <p class="description"> Music System IV with CD Player and Dual Alarm </p>
+                                </div>
+                                <div>
+                                    <div class="tsc-form-body-product-content-number"></div>
+                                </div>
+                            </div>
+                            <div class="tsc-form-body-product-number" style="display: flex; flex-direction: column; align-items: center; margin-right: 3px;">
+                                <i style="color: #bbb; font-size: 9px; padding: 5px; cursor: pointer;" class="fa fa-chevron-up"></i>
+
+                                <input style="margin-right: 0px; text-align: center;" type="text" value="1">
+
+                                <i style="color: #bbb; font-size: 9px; padding: 5px; cursor: pointer;" class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="tsc-form-body-product-price">
+                                599.95
+                                <span style="font-weight: 200; font-size: 9px; color: #999;">USD</span>
+                            </div>
+                        </div><div class="tsc-form-body-product">
+                            <figure class="tsc-form-body-product-image" style="position: relative;">
+                                <div class="closed" style="right: -10px; top: -10px; padding: 5px;">
+                                    <i class="fa fa-times-circle"></i>
+                                </div>
+                                <img src="http://purplepay.crossborder.fedex.com/Shopping_Bag_files/concierge-superloft-ez-zip-fiberbed-wcompression-bag-d-2016122914081707-503241.jpg">
+                            </figure>
+                            <div class="tsc-form-body-product-content">
+                                <div>
+                                    <p class="name"> Concierge Collection SuperLoft™ </p>
+                                    <p class="description"> EZ Zip Fiberbed with StoreSmart Compression Bag </p>
+                                </div>
+                                <div>
+                                    <div class="tsc-form-body-product-content-number"></div>
+                                </div>
+                            </div>
+                            <div class="tsc-form-body-product-number" style="display: flex; flex-direction: column; align-items: center; margin-right: 3px;">
+                                <i style="color: #bbb; font-size: 9px; padding: 5px; cursor: pointer;" class="fa fa-chevron-up"></i>
+
+                                <input style="margin-right: 0px; text-align: center;" type="text" value="1">
+
+                                <i style="color: #bbb; font-size: 9px; padding: 5px; cursor: pointer;" class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="tsc-form-body-product-price">
+                                79.95
+                                <span style="font-weight: 200; font-size: 9px; color: #999;">USD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- END Sumary -->
                 <section class="form-section">
                     <!-- BUYER -->
                     <p class="form-title" >Buyer info <i class="fa fa-angle-down"></i></p>
@@ -214,7 +325,7 @@
                             <!-- <p class="tsc-form-body-option-text" style="font-size: 11px; padding-left: 1px;">Same as shipping info</p> -->
                             <p class="tsc-form-body-option-text" style="font-size: 11px; padding-left: 1px;">Same as buyer info</p>
                         </div>
-                    </div>                  
+                    </div>
                     <!-- Country -->
                     <div class="input-wrapper">
                         <span class="icon">
@@ -306,18 +417,18 @@
                 </section>
 
             </div>
+            <!-- End layout Body -->
 
-            <div class="layout-bottom">
+            <!-- Star layout Bottom -->
+            <div class="layout__bottom">
                 <footer class="footer">
                     <button class="button">Next</button>
                 </footer>
 
             </div>
+            <!-- End layout Bottom -->
 
         </div>
-
-
-
-
+        <!-- End layout -->
     </body>
 </html>

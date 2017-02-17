@@ -161,13 +161,13 @@ body {
   width: 100%;
   background: #f5f5f7;
 }
-.layout-header {
+.layout__header {
   display: table-header-group;
 }
-.layout-body {
+.layout__body {
   display: table-row-group;
 }
-.layout-bottom {
+.layout__bottom {
   display: table-footer-group;
 }
 .text {
@@ -186,6 +186,13 @@ body {
   font-weight: 400;
   color: #5b5b65;
   letter-spacing: 0.25px;
+}
+.form-title {
+  cursor: pointer;
+  font-size: 17px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .button {
   color: #fff;
@@ -263,13 +270,6 @@ body {
   z-index: 2;
   font-size: 16px;
   right: 15px;
-}
-.form-title {
-  cursor: pointer;
-  font-size: 17px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-top: 10px;
 }
 .buyer-type {
   margin-top: 8px;
@@ -375,20 +375,23 @@ body {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-.tsc-form-language-inner p {
+.form__language__inner p {
   font-size: 12px;
 }
-.tsc-form-language-inner p i {
+.form__language__inner p i {
   font-size: 13px;
 }
-.tsc-dropdown {
+.form__dropdown {
   position: relative;
   height: 36px;
+  margin-bottom: 10px;
 }
-.tsc-dropdown margin-bottom 10px-elements,
-.tsc-dropdown margin-bottom 10px border-radius 6px,
-.tsc-dropdown margin-bottom 10px background white,
-.tsc-dropdown margin-bottom 10px.open {
+.form__dropdown__elements {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: #fff;
+}
+.form__dropdown__elements__open {
   position: absolute;
   width: 100%;
   z-index: 1;
@@ -396,47 +399,18 @@ body {
   -webkit-box-shadow: 0 7px 20px rgba(0,0,0,0.25);
   box-shadow: 0 7px 20px rgba(0,0,0,0.25);
 }
-.tsc-dropdown margin-bottom 10px-elements .fa-angle-down,
-.tsc-dropdown margin-bottom 10px border-radius 6px .fa-angle-down,
-.tsc-dropdown margin-bottom 10px background white .fa-angle-down,
-.tsc-dropdown margin-bottom 10px.open .fa-angle-down {
+.form__dropdown__elements__open .fa-angle-down {
   display: none;
 }
-.tsc-dropdown margin-bottom 10px-elements.gray,
-.tsc-dropdown margin-bottom 10px border-radius 6px.gray,
-.tsc-dropdown margin-bottom 10px background white.gray,
-.tsc-dropdown margin-bottom 10px.open.gray {
-  background: #f5f5f7 !important;
+.form__dropdown__elements--gray {
+  width: 80px;
+  background: initial;
 }
-.tsc-dropdown margin-bottom 10px-elements.gray spanhover,
-.tsc-dropdown margin-bottom 10px border-radius 6px.gray spanhover,
-.tsc-dropdown margin-bottom 10px background white.gray spanhover,
-.tsc-dropdown margin-bottom 10px.open.gray spanhover,
-.tsc-dropdown margin-bottom 10px-elements.gray .tsc-dropdown-elementhover,
-.tsc-dropdown margin-bottom 10px border-radius 6px.gray .tsc-dropdown-elementhover,
-.tsc-dropdown margin-bottom 10px background white.gray .tsc-dropdown-elementhover,
-.tsc-dropdown margin-bottom 10px.open.gray .tsc-dropdown-elementhover {
+.form__dropdown__elements--gray span:hover,
+.form__dropdown__elements--gray .form__dropdown__element:hover {
   background: #ddd;
 }
-.tsc-dropdown margin-bottom 10px-elements .tsc-dropdown-elementnot(last-child) .tsc-form-body-option,
-.tsc-dropdown margin-bottom 10px border-radius 6px .tsc-dropdown-elementnot(last-child) .tsc-form-body-option,
-.tsc-dropdown margin-bottom 10px background white .tsc-dropdown-elementnot(last-child) .tsc-form-body-option,
-.tsc-dropdown margin-bottom 10px.open .tsc-dropdown-elementnot(last-child) .tsc-form-body-option {
-  border-bottom: 0;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-.tsc-dropdown margin-bottom 10px-elements .tsc-dropdown-elementnot(first-child) .tsc-form-body-option,
-.tsc-dropdown margin-bottom 10px border-radius 6px .tsc-dropdown-elementnot(first-child) .tsc-form-body-option,
-.tsc-dropdown margin-bottom 10px background white .tsc-dropdown-elementnot(first-child) .tsc-form-body-option,
-.tsc-dropdown margin-bottom 10px.open .tsc-dropdown-elementnot(first-child) .tsc-form-body-option {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-}
-.tsc-dropdown margin-bottom 10px-elements .tsc-form-body-optionhover,
-.tsc-dropdown margin-bottom 10px border-radius 6px .tsc-form-body-optionhover,
-.tsc-dropdown margin-bottom 10px background white .tsc-form-body-optionhover,
-.tsc-dropdown margin-bottom 10px.open .tsc-form-body-optionhover {
+.form__dropdown__elements--gray .tsc-form-body-optionhover {
   -webkit-transition: 0.35s;
   -moz-transition: 0.35s;
   -o-transition: 0.35s;
@@ -444,23 +418,13 @@ body {
   transition: 0.35s;
   background: #000;
 }
-.tsc-dropdown margin-bottom 10px-element {
+.form__dropdown__elements__element {
   display: block;
 }
-.tsc-dropdown margin-bottom 10px-element.selected {
+.form__dropdown__elements__element.selected {
   display: block;
 }
-.tsc-form-language {
-  cursor: pointer;
-  position: absolute;
-  z-index: 1;
-  height: 22px;
-}
-.tsc-form-language img {
-  width: 100%;
-  min-width: 26px;
-}
-.tsc-form-language {
+.form__language {
   top: 5px;
   left: 5px;
   cursor: pointer;
@@ -468,11 +432,10 @@ body {
   z-index: 1;
   height: 22px;
 }
-.tsc-form-language img {
-  width: 100%;
-  min-width: 26px;
+.form__language img {
+  width: 26px;
 }
-.tsc-form-language-inner {
+.form__language__inner {
   padding: 3px;
   display: -webkit-box;
   display: -moz-box;
@@ -490,10 +453,7 @@ body {
   left: 8px;
   top: 8px;
 }
-.tsc-form-language-inner img {
-  width: 26px;
-}
-.tsc-form-language-inner p {
+.form__language__inner p {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -509,13 +469,12 @@ body {
   font-size: 10px;
   color: rgba(102,102,102,0.75);
 }
-.tsc-form-language-inner p i {
+.form__language__inner p i {
   padding-left: 2px;
   margin-top: 2px;
   font-size: 11px;
 }
-.tsc-form-back,
-.tsc-form-closed {
+.form__closed {
   right: 8px;
   width: 22px;
   top: 8px;
@@ -524,8 +483,7 @@ body {
   z-index: 1;
   height: 22px;
 }
-.tsc-form-back img,
-.tsc-form-closed img {
+.form__closed img {
   width: 100%;
   min-width: 26px;
 }
